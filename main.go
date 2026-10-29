@@ -255,7 +255,7 @@ func main() {
 					AuthorName: envOr(EnvGithubActor, ""),
 					AuthorLink: getEnv("GITHUB_SERVER_URL") + "/" + getEnv(EnvGithubActor),
 					AuthorIcon: getEnv("GITHUB_SERVER_URL") + "/" + getEnv(EnvGithubActor) + ".png?size=32",
-					Footer:     envOr(EnvSlackFooter, "<https://github.com/ciro-maciel|Customized By ciro-maciel> | <"+getEnv(EnvGithubRun)+"|Triggered on this workflow run>"),
+					Footer:     envOr(EnvSlackFooter, "<https://github.com/maciel-ciro|Customized By maciel-ciro> | <"+getEnv(EnvGithubRun)+"|Triggered on this workflow run>"),
 					Fields:     fields,
 				},
 			},
