@@ -15,7 +15,7 @@ ENV GOOS linux
 RUN go build -a -installsuffix cgo -ldflags '-w  -extldflags "-static"' -o /go/bin/slack-notify main.go
 
 # alpine:latest as of 2024-03-11
-FROM alpine@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
+FROM alpine@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf
 
 COPY --from=builder /go/bin/slack-notify /usr/bin/slack-notify
 
